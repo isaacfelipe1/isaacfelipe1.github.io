@@ -1,0 +1,308 @@
+@Charset "UTF-8";
+
+/*
+Geral
+*/
+body{
+    font-family: "Open Sans", Helvetica, Arial, Sans-serif;
+    color: #4d4d4d;
+    
+}
+h1, h2, h3{
+    margin: 0;
+    font-family: "Arial", Sans-serif;
+}
+
+/*
+Cabeçalho
+*/
+header{
+    background-image: url(moda.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px ;
+}
+header p{
+    margin-bottom: 2em;
+}
+
+
+/*
+Sobre
+*/
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 20px;
+    background-color: #F9F9F9;
+    color: #000000;
+}
+#sobre p{
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+
+}
+.botao{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color:#069;
+    font-size:.9em;
+    border-radius: 3px;
+}
+#sobre .botao{
+    background-color: #f1f1f1;
+    color: #069;
+}
+/*
+Servicos
+*/
+
+#servicos{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#servicos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+/*
+galeria
+*/
+#galeria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    padding: 20px;
+}
+#galeria h2{
+    margin-bottom: 20px;
+}
+#galeria img{
+    width: 100%;
+}
+
+
+/*
+Servicos
+*/
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+/*
+Rodapé
+*/
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #069;
+    color: #ffffff;
+}
+/*
+MEDIA QUERIES
+*/
+@media screen and  (min-width: 1200px){
+    /*
+Navegaçao
+*/
+nav{
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+nav ul{
+    flex-direction: row;
+    width: 70%;
+}
+    /*
+Navegaçao
+*/
+header{
+    height: 600px;
+    height: 60vh;
+    justify-content: center;
+}
+    /*
+Navegaçao
+*/
+#sobre{
+    height: 250px;
+    height: 30vh;
+    justify-content: center;
+    min-height: 250px;
+
+}
+    /*
+servicos
+*/
+
+#servico{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+
+
+}
+#servicos h2{
+    text-align: center;
+    width: 100%;
+
+}
+#servicos div{
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 0 10px;
+}
+    /*
+galeria
+*/
+#galeria{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#galeria h2{
+    width:100%;
+    text-align:center;
+}
+#galeria img{
+    width: 33.3333333333%;
+}
+
+    /*
+galeria
+*/
+
+#contato {
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+#contato h2,
+#contato p{
+width: 100%;
+}
+
+
+
+}
+*{
+    margin:0;
+    padding:0;
+    }
+    .menu{
+    width:100%;
+    height:50px;
+    background-color: #069;
+    font-family: "Arial";
+    }
+    .menu ul{
+    list-style: none;
+    position: relative;
+
+    }
+    .menu ul li{
+    width:150px;
+    float:left;
+    }
+    .menu a{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #069;
+    color: #ffffff;
+    }
+    .menu ul ul{
+    position: absolute;
+    visibility: hidden;
+    }
+    .menu ul li:hover ul{
+    visibility: visible;
+
+    }
+    .menu a:hover{
+    background-color: #f4f4f4;
+    color: #555;
+    }
+    .menu ul ul li{
+    float: none;
+    border-bottom: solid 1px #ccc;
+    }
+    .menu ul ul li a{
+    background-color: #069;
+    }
+    label[for="bt_menu"]{
+        padding: 5px;
+        background-color: #069;
+        color: #fff;
+        font-family: "Arial";
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    #bt_menu{
+        display: none;
+    }
+    label[for="bt_menu"]{
+        display: none;
+    }
+    @media(max-width: 800px){
+        label[for="bt_menu"]{
+        display: block;
+        }
+        #bt_menu:checked ~.menu{
+            margin-left: 0;
+        }
+        .menu{
+            margin-top: 5px;
+            margin-left: -100%;
+            transition: all .4s;
+
+        }
+
+
+        .menu ul li{
+            width: 100%;
+            float: none;
+        }
+        .menu ul ul{
+            position: static;
+            overflow: hidden;
+            max-height: 0;
+            transition: all .4s;
+        }
+        .menu ul li:hover ul{
+            height: auto;
+            max-height: 200px;
+        }
+    }
